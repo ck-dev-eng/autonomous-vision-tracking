@@ -27,13 +27,13 @@ if uploaded_file is not None:
     
     with col1:
         st.subheader("Raw Dashcam Input")
-        st.image(cv2.cvtColor(image, cv2.COLOR_BGR2RGB), use_column_width=True)
+        st.image(cv2.cvtColor(image, cv2.COLOR_BGR2RGB), use_container_width=True)
         
     processed_img, alert_triggered, detected_count = engine.process_frame(image, conf_threshold)
     
     with col2:
         st.subheader("Perception Pipeline Output")
-        st.image(cv2.cvtColor(processed_img, cv2.COLOR_BGR2RGB), use_column_width=True)
+        st.image(cv2.cvtColor(processed_img, cv2.COLOR_BGR2RGB), use_container_width=True)
         
     st.divider()
     m1, m2 = st.columns(2)
