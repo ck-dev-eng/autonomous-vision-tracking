@@ -4,7 +4,7 @@ from ultralytics import YOLO
 
 class PerceptionEngine:
     def __init__(self):
-        # YOLOv8 nano modelini yükle
+        
         self.model = YOLO('yolov8n.pt') 
         
     def process_frame(self, frame, conf_threshold=0.35):
